@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { RaceComponent } from './components/race/race.component';
 
 @Component({
-  selector: 'nx-root',
+  selector: 'eva-root',
   standalone: true,
-  imports: [],
-  templateUrl: './app.component.html',
+  imports: [RaceComponent],
+  templateUrl: 'app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ponyracer';
+  user: {name: string} | undefined;
 }

@@ -1,0 +1,21 @@
+<p *ngIf="ponies.length > 0; else empty"> In race are {{ponies.length}} ponies</p>
+<ng-template #empty>
+    <p>No races today</p>
+</ng-template>
+
+<div>
+    <button (click)="refreshPonyList()"> Refresh the list of ponies in race</button>
+</div>
+
+<div>
+    <ul>
+        <li *ngFor="let pony of ponies; index as i" (click)="showPonyDetails(pony.name)"> 
+            <p [ngStyle]="{ color: pony.color}">{{i + 1}}. {{pony.name}} </p>
+            <div *ngIf="pony.showDetails"> 
+                <img [src]="pony.pic"> 
+                <p>AGE is {{pony.age}}</p>
+                <p>ADULT {{pony.adult}}</p>
+            </div> 
+        </li>
+    </ul>
+</div>
