@@ -1,8 +1,11 @@
 <div>
     <h2> Ponies </h2>
     <eva-pony 
-        *ngFor="let currentPony of ponies" 
+        *ngFor="let currentPony of ponies | slice: 0 : size" 
         [pony]="currentPony" 
         (ponySelected)="betOnPony($event)">
     </eva-pony>
 </div>
+
+<div> <h1 *ngIf="asyncGreeting | async as greeting"> {{greeting}} </h1> </div>
+

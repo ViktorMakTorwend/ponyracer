@@ -1,1 +1,8 @@
-<div (click)="selectPony()" >{{pony.name}}</div>
+<div (click)="selectPony()" >{{pony.name | uppercase}}</div>
+<br>
+<div>All the pony data in line: {{pony | json}}</div>
+<p> Number in catalog is: {{pony.numberInCatalog | number}} </p>
+<p> Persent of wins is: {{pony.winPer| percent}} </p>
+<p> The cost is: {{pony.cost | currency: "EUR"}} </p>
+<p> The birtday is: {{pony.birtday | date: "longDate" }} </p>
+<p> The age is: {{pony.birtday | fromNow}}</p>
