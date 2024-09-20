@@ -6,7 +6,10 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'eva-ponies',
   standalone: true,
-  imports: [PonyComponent, CommonModule],
+  imports: [
+    PonyComponent, 
+    CommonModule
+  ],
   templateUrl: './ponies.component.html',
   styleUrl: './ponies.component.css'
 })
