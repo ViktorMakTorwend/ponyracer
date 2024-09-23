@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { GetPoniesService } from '../../services/get-ponies.service';
 import { LoggingService } from '../../services/logging.service';
 import { LoggingAPIService } from '../../services/logging-api.service';
+import { RxJsService } from '../../services/rx-js.service';
 
 @Component({
   selector: 'eva-ponies',
@@ -22,8 +23,13 @@ export class PoniesComponent  {
   ponies: Array<PonyModel> = [];
   size = 3;
 
-  constructor(private getPoniesService: GetPoniesService) {
+  constructor(
+    private getPoniesService: GetPoniesService,
+    private rxjsService: RxJsService,
+  ) {
     this.ponies = this.getPoniesService.getPonies();
+    rxjsService.observableExample();
+    rxjsService.observableSubscribe();
   }
 
   betOnPony(pony: PonyModel): void {
