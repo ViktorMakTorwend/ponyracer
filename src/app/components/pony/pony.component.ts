@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { PonyModel } from '../../types/ponModel';
+import { PonyModel } from '../../types/ponyModel';
 import { CommonModule } from '@angular/common';
 
 @Component({
