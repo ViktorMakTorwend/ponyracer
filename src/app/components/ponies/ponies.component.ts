@@ -40,7 +40,4 @@ export class PoniesComponent {
       console.log("THE BET IS ON PONY: ", pony.name)
     }
 
-    asyncGreeting = new Promise(resolve => {
-      window.setTimeout(() => resolve('The race is began'), 3000)
-    })
 }
