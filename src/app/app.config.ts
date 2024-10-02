@@ -8,10 +8,5 @@ const IS_PROD = false;
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    //{provide: LoggingService, useClass: LoggingAPIService}
-    // GetPoniesService, {
-    //   provide: LoggingService,
-    //   useFactory: () => (IS_PROD ? new LoggingAPIService() : new LoggingService)
-    // }
   ]
 };

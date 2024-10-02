@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class PonyComponent {
   @Input({required: true}) pony!: PonyModel;
+  @Input() running = true;
   @Output() readonly ponySelected = new EventEmitter<PonyModel>();
 
   selectPony(): void {

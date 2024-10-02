@@ -6,17 +6,20 @@ export const ponies: Array<PonyModel> = [
       birtday: "2022-03-25",
       numberInCatalog: 58624,
       winPer: 0.8,
-      cost: 2547 },
+      cost: 2547,
+      color: "white"},
     { id: 2, 
       name: 'Pinkie Pie',
       birtday: "2021-04-25",
       numberInCatalog: 95127,
       winPer: 0.75,
-      cost: 3574 },
+      cost: 3574,
+      color: "black"},
     { id: 3, 
       name: 'London Vi',
       birtday: "2020-08-15",
       numberInCatalog: 12475,
       winPer: 0.3,
-      cost: 6524}
+      cost: 6524,
+      color: "brown"}
     ];

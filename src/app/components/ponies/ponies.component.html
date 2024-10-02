@@ -1,7 +1,7 @@
 <div>
     <h2> Ponies </h2>
     <eva-pony 
-        *ngFor="let currentPony of ponies | slice: 0 : size" 
+        *ngFor="let currentPony of ponies" 
         [pony]="currentPony" 
         (ponySelected)="betOnPony($event)">
     </eva-pony>

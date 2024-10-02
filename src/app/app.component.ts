@@ -9,5 +9,5 @@ import { PoniesComponent } from "./components/ponies/ponies.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ponyracer';
+  title = 'Hello, ponyracer';
 }

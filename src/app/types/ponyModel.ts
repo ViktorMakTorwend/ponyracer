@@ -5,4 +5,5 @@ export interface PonyModel  {
     numberInCatalog: number;
     winPer: number;
     cost: number;
+    color: string;
 }
