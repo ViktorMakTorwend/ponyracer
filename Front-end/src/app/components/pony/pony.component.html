@@ -1,0 +1,10 @@
+
+<div>{{pony.name | uppercase}}
+    <img 
+        [src]="'/images/pony-' + pony.color.toLowerCase() + (running ? '-running' : '') + '.jpg'" 
+        [alt]="pony.name"
+        (click)="selectPony()" 
+        width="200"
+        height="200"
+    /> 
+</div>
