@@ -4,6 +4,7 @@ import { PonyModel } from '../../types/ponyModel';
 import { CommonModule } from '@angular/common';
 import { HTTP_PoniesService } from '../../services/HTTP-ponies.service';
 import { LoggingService } from '../../services/logging.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'eva-ponies',
@@ -12,6 +13,7 @@ import { LoggingService } from '../../services/logging.service';
   imports: [
     PonyComponent,
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './ponies.component.html',
   styleUrl: './ponies.component.css'

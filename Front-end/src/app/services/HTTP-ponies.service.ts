@@ -16,8 +16,15 @@ export class HTTP_PoniesService {
 
   getPonies(): Observable<Array<PonyModel>> {
     let data: Observable<Array<PonyModel>> = this.http
-      .get<Array<PonyModel>>("http://localhost:3000/ponies")
-    this.logingService.log("PONIES DATA FROM SERVER");
+      .get<Array<PonyModel>>("http://localhost:3000/ponies");
+    this.logingService.log("PONIES FROM SERVER");
     return data
+  }
+
+  getPonyId(id: string): Observable<any> {
+    let pony: Observable<any> = this.http
+      .get<any>(`http://localhost:3000/ponies?id=${id}`);
+    this.logingService.log("PONY FROM SERVER");
+    return pony
   }
 }

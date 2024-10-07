@@ -1,2 +1,20 @@
 <h1> Hello </h1>
-<eva-ponies></eva-ponies>
+<header>
+    <nav>
+      <ul>
+        <li><a routerLink="/registration">Registration</a></li>
+        <li><a routerLink="/registration-reactive">Registration Reactive</a></li>
+        <li><a routerLink="/ponies">Ponies</a></li>
+        <li><a  routerLink="/" 
+                routerLinkActive 
+                [routerLinkActiveOptions]="{exact: true}"
+                #route="routerLinkActive"
+              >Home {{ route.isActive ?'(You are home)' : '' }}</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>made with &lt;3 by Ninja Squad</footer>

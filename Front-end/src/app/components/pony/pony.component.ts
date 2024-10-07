@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PonyModel } from '../../types/ponyModel';
 import { CommonModule } from '@angular/common';
+import { HTTP_PoniesService } from '../../services/HTTP-ponies.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'eva-pony',
@@ -12,12 +14,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pony.component.css'
 })
 export class PonyComponent {
-  @Input({required: true}) pony!: PonyModel;
-  @Input() running = true;
-  @Output() readonly ponySelected = new EventEmitter<PonyModel>();
+  pony: PonyModel | undefined;
+  running: boolean = true;
 
-  selectPony(): void {
-    this.ponySelected.emit(this.pony);
+  constructor(
+    ponyService: HTTP_PoniesService,
+    route: ActivatedRoute,
+  ) {
+    const id = route.snapshot.paramMap.get('ponyId')!;
+    ponyService.getPonyId(id).subscribe(pony => this.pony = pony[0])
   }
 
 }

@@ -1,10 +1,7 @@
-<div>
+
     <h2> Ponies </h2>
-    <eva-pony 
-        *ngFor="let currentPony of ponies" 
-        [pony]="currentPony" 
-        (ponySelected)="betOnPony($event)">
-    </eva-pony>
-</div>
-
-
+     <ul *ngFor="let pony of ponies" >
+        <li> {{pony.name}} 
+             <a [routerLink]="['/ponies', pony.id]">See pony</a>
+        </li>   
+     </ul>

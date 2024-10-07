@@ -1,0 +1,12 @@
+<h2>Sign up</h2>
+<form (ngSubmit)="register()" [formGroup]="userForm">
+    <div>
+        <label>user name</label>
+        <input formControlName="username">
+    </div>
+    <div>
+        <label>password</label>
+        <input type="password" formControlName="password">
+    </div>
+    <button [disabled]="userForm.invalid" type="submit">Register</button>
+</form>
