@@ -1,6 +1,6 @@
 {
     "ponies": [
-        { "id": 1, 
+        { "id": 11, 
           "name": "Rainbow Dash",
           "birtday": "2022-03-25",
           "numberInCatalog": 58624,
@@ -8,7 +8,7 @@
           "cost": 2547,
           "color": "white"
         },
-        { "id": 2, 
+        { "id": 25, 
           "name": "Pinkie Pie",
           "birtday": "2021-04-25",
           "numberInCatalog": 95127,
@@ -16,12 +16,25 @@
           "cost": 3574,
           "color": "black"
         },
-        { "id": 3, 
+        { "id": 37, 
           "name": "London Vi",
           "birtday": "2020-08-15",
           "numberInCatalog": 12475,
           "winPer": 0.3,
           "cost": 6524,
           "color": "brown"}
+        ],
+    "users": [
+          { "id": 11, 
+            "name": "vik",
+            "birtday": "2022-03-25"
+          },
+          { "id": 25, 
+            "name": "duc",
+            "birtday": "2021-04-25"
+          },
+          { "id": 37, 
+            "name": "nik",
+            "birtday": "2020-08-15"}
         ]
 }
