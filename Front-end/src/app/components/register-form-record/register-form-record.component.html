@@ -1,0 +1,14 @@
+<form (ngSubmit)="register()" [formGroup]="packingListForm">
+    <div formGroupName="equipments">
+        <label>Equipements</label>
+        <input #equipment name="equipement-to-add" />
+        <button id="add-equipment" (click)="addEquipment(equipment.value)">Add</button>
+        <div *ngFor="let control of equipmentRecord.controls | keyvalue">
+            <label [for]="'eq-' + control.key">{{ control.key }}</label>
+            <input [id]="'eq-' + control.key" type="checkbox" class="equipment" [formControlName]="control.key" />
+            <button class="remove-equipment" (click)="removeEquipment(control.key)">Remove
+                equipement</button>
+        </div>
+    </div>
+    <button [disabled]="packingListForm.invalid" type="submit">Register</button>
+</form>

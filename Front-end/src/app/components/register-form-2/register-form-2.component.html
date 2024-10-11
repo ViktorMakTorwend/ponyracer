@@ -3,10 +3,22 @@
     <div>
         <label>user name</label>
         <input formControlName="username">
+        <div *ngIf="userForm.get('username')?.hasError('required') && 
+                    userForm.get('username')?.dirty">
+            User name is required
+        </div>
+        <div *ngIf="userForm.get('username')?.hasError('minlength') && 
+                    userForm.get('password')?.dirty">
+            User name should be 3 haracters min
+        </div>
+        <div *ngIf="userForm.get('username')?.hasError('minlength') && userForm.get('password')?.dirty">
+            User name should be 3 haracters min
+        </div>
     </div>
     <div>
         <label>password</label>
         <input type="password" formControlName="password">
+        <div *ngIf="userForm.get('password')?.hasError('required')">Password is required</div>
     </div>
     <button [disabled]="userForm.invalid" type="submit">Register</button>
 </form>
