@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { PoniesComponent } from "./components/ponies/ponies.component";
 import { RouterModule } from '@angular/router';
+import { PoniesObsrvblComponent } from './components/ponies-obsrvbl/ponies-obsrvbl.component';
 
 @Component({
   selector: 'nx-root',
   standalone: true,
   imports: [
-    PoniesComponent,
+    PoniesObsrvblComponent,
     RouterModule,
   ],
   templateUrl: './app.component.html',

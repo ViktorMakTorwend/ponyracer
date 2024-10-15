@@ -1,20 +1,22 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PonyModel } from '../../types/ponyModel';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { HTTP_PoniesService } from '../../services/HTTP-ponies.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, shareReplay } from 'rxjs';
 
 @Component({
-  selector: 'eva-pony',
+  selector: 'eva-pony-obsrvbl',
   standalone: true,
   imports: [
     CommonModule,
+    AsyncPipe,
   ],
-  templateUrl: './pony.component.html',
-  styleUrl: './pony.component.css'
+  templateUrl: './pony-obsrvbl.component.html',
+  styleUrl: './pony-obsrvbl.component.css'
 })
-export class PonyComponent {
-  pony: PonyModel | undefined;
+export class PonyObsrvblComponent {
+  pony: Observable<PonyModel | undefined>;
   running: boolean = true;
 
   constructor(
@@ -22,7 +24,8 @@ export class PonyComponent {
     route: ActivatedRoute,
   ) {
     const id = route.snapshot.paramMap.get('ponyId')!;
-    ponyService.getPonyId(id).subscribe(pony => this.pony = pony[0])
+    this.pony = ponyService
+      .getPonyId(id)
+      //.pipe(shareReplay());
   }
-
 }

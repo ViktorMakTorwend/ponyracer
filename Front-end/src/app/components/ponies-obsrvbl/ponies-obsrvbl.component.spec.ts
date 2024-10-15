@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PonyReusableComponent } from './pony-reusable.component';
+import { PoniesObsrvblComponent } from './ponies-obsrvbl.component';
 
-describe('PonyReusableComponent', () => {
-  let component: PonyReusableComponent;
-  let fixture: ComponentFixture<PonyReusableComponent>;
+describe('PoniesObsrvblComponent', () => {
+  let component: PoniesObsrvblComponent;
+  let fixture: ComponentFixture<PoniesObsrvblComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PonyReusableComponent]
+      imports: [PoniesObsrvblComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PonyReusableComponent);
+    fixture = TestBed.createComponent(PoniesObsrvblComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

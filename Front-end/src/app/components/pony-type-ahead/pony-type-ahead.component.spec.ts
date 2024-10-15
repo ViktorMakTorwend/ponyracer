@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterFormComponent } from './register-form.component';
+import { PonyTypeAheadComponent } from './pony-type-ahead.component';
 
-describe('RegisterFormComponent', () => {
-  let component: RegisterFormComponent;
-  let fixture: ComponentFixture<RegisterFormComponent>;
+describe('PonyTypeAheadComponent', () => {
+  let component: PonyTypeAheadComponent;
+  let fixture: ComponentFixture<PonyTypeAheadComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegisterFormComponent]
+      imports: [PonyTypeAheadComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RegisterFormComponent);
+    fixture = TestBed.createComponent(PonyTypeAheadComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

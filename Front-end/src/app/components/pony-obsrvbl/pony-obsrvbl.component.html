@@ -1,0 +1,41 @@
+<!-- <ng-container *ngIf="pony">
+    <h2>{{ (pony | async)?.name | uppercase }}</h2>
+    <ul>
+    </ul>
+    <div>
+        <img 
+            [src]="'/images/pony-' + ((pony | async)?.color | lowercase) + (running ? '-running' : '') + '.jpg'" 
+            [alt]="(pony | async)?.name"
+            width="300"
+            height="200"
+        /> 
+    </div>
+    <div>
+        <ul>
+            <li>Cost: {{(pony | async)?.cost |  currency:'EUR'}}</li>
+            <li>Birtday: {{(pony | async)?.birtday}}</li>
+            <li>Raiting: {{(pony | async)?.winPer}}</li>
+        </ul>
+    </div>
+</ng-container> -->
+
+<ng-container *ngIf="pony | async as ponyModel">
+    <h2>{{ ponyModel.name | uppercase }}</h2>
+    <ul>
+    </ul>
+    <div>
+        <img 
+            [src]="'/images/pony-' + (ponyModel.color | lowercase) + (running ? '-running' : '') + '.jpg'" 
+            [alt]="ponyModel.name"
+            width="300"
+            height="200"
+        /> 
+    </div>
+    <div>
+        <ul>
+            <li>Cost: {{ ponyModel.cost |  currency:'EUR' }}</li>
+            <li>Birtday: {{ ponyModel.birtday }}</li>
+            <li>Raiting: {{ ponyModel.winPer }}</li>
+        </ul>
+    </div>
+</ng-container>

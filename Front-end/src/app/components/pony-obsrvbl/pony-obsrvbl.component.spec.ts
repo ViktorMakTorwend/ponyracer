@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RegisterChangeComponent } from './register-change.component';
+import { PonyObsrvblComponent } from './pony-obsrvbl.component';
 
-describe('RegisterChangeComponent', () => {
-  let component: RegisterChangeComponent;
-  let fixture: ComponentFixture<RegisterChangeComponent>;
+describe('PonyObsrvblComponent', () => {
+  let component: PonyObsrvblComponent;
+  let fixture: ComponentFixture<PonyObsrvblComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegisterChangeComponent]
+      imports: [PonyObsrvblComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RegisterChangeComponent);
+    fixture = TestBed.createComponent(PonyObsrvblComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
